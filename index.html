@@ -6,17 +6,28 @@
 <p id="output"></p>
 <script>
 /* Create an array */
-   let array = [["i","love","these","lyrics"],["like","who","wrote","this."],["To","all", "my", "hearts"],["code", "your", "brains","guys."]]
-
+   let array = [["i","love","these","lyrics "],["like","who","wrote","this. "],["To","all", "my", "hearts "],["code", "your", "brains","guys."]]
    
-/* Create function that concatenates array into
-a sentence (adding spaces between words), and 
-outputs the result to '<p id="output"><p>' innerHTML */
-
-
+   generateBtn.addEventListener("click",arraySentence)
 /* Add an event listener to generateBtn.
 When clicked, the generateBtn should execute 
 the generateSentence function, displaying the sentence. */
+
+
+   function arraySentence(){
+/* Create function that concatenates array into
+a sentence (adding spaces between words), and 
+outputs the result to '<p id="output"><p>' innerHTML */
+   for(let row of array){
+      let songLyrics = row.join("  ")
+      console.log(songLyrics)
+      output.textContent += songLyrics
+   }
+   }
+
+
+
+
 
 
 </script>
